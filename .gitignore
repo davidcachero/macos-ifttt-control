@@ -1,0 +1,6 @@
+.idea
+src/app/node_modules/*
+!src/app/node_modules/jquery/
+!src/app/node_modules/electron-reload/
+src/app/cli/vendors/
+build/

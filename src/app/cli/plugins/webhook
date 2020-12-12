@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+help(){
+    cat<<__EOF__
+    usage:  m webhook [ help ]
+
+    Examples:
+      m webhook "http://google.com"    # triggers a webhook
+__EOF__
+}
+
+webhook(){
+  echo "Triggering Webhook..."
+  curl -i "${1}"
+}
+
+case $1 in
+    help)
+        help
+        ;;
+    *)
+        webhook "$@"
+        ;;
+esac
+
+# vim: ts=4 sw=4 softtabstop=4 expandtab
